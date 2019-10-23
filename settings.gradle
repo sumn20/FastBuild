@@ -1,0 +1,2 @@
+include ':app', ':toolkit'
+rootProject.name='FastBuild'

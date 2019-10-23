@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="loadStyle" format="reference" />
+
+    <dimen name="dp_120">120dp</dimen>
+    <dimen name="dp_16">16dp</dimen>
+    <dimen name="dp_4">4dp</dimen>
+    <dimen name="dp_8">8dp</dimen>
+    <dimen name="dp_80">80dp</dimen>
+    <dimen name="sp_12">12sp</dimen>
+    <dimen name="sp_14">14sp</dimen>
+    <item name="image_empty_icon" type="id" />
+    <item name="image_error_icon" type="id" />
+    <item name="text_empty_action" type="id" />
+    <item name="text_empty_message" type="id" />
+    <item name="text_error_action" type="id" />
+    <item name="text_error_message" type="id" />
+    <string name="retry">重试~</string>
+
+    <style name="LoadStyleDefault">
+        <item name="lvEmptyResId">@layout/base_empty</item>
+        <item name="lvErrorResId">@layout/base_error</item>
+        <item name="lvLoadingResId">@layout/base_loading</item>
+
+        <item name="lvEmptyIcon">@drawable/vector_empty</item>
+        <item name="lvEmptyText">暂无数据</item>
+        <item name="lvErrorIcon">@drawable/vector_error</item>
+        <item name="lvErrorText">无网络连接，请检查您的网络...</item>
+        <item name="lvErrorAction">加载失败，点击重试~~</item>
+    </style>
+
+    <declare-styleable name="LoadView">
+
+        <attr name="lvEmptyResId" format="reference" />
+        <attr name="lvLoadingResId" format="reference" />
+        <attr name="lvErrorResId" format="reference" />
+
+        <attr name="lvEmptyIcon" format="reference" />
+        <attr name="lvEmptyText" format="string" />
+        <attr name="lvEmptyAction" format="string" />
+
+        <attr name="lvErrorIcon" format="reference" />
+        <attr name="lvErrorText" format="string" />
+        <attr name="lvErrorAction" format="string" />
+
+    </declare-styleable>
+    <declare-styleable name="CheckJumpView">
+        <attr name="jumpTitle" format="string"/>
+        <attr name="jumpText" format="string"/>
+        <attr name="showImage" format="boolean"/>
+        <attr name="showRight" format="boolean"/>
+        <attr name="image" format="reference"/>
+
+    </declare-styleable>
+</resources>
