@@ -4,7 +4,7 @@
 
 ```
 dependencies {
-    implementation 'com.github.sumn20:FastBuild:1.0'
+    implementation 'com.github.sumn20:FastBuild:1.1'
 }
 ```
 ```
