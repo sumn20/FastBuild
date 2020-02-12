@@ -8,5 +8,5 @@
     <color name="grey300">#e0e0e0</color>
     <color name="bg_color">#F4F4F4</color>
     <color name="colorAppBackground">#f8f8f8</color>
-
+    <drawable name="transparent">#00000000</drawable>
 </resources>
