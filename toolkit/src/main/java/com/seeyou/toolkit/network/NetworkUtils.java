@@ -10,6 +10,8 @@ import com.seeyou.toolkit.ToolKit;
 import com.seeyou.toolkit.base.BaseModel;
 import com.seeyou.toolkit.intfic.NetWorkCallback;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -59,6 +61,19 @@ public class NetworkUtils {
 
         customRequest.setTag(requestValue);
         queue.add(customRequest);
+    }
+
+    public <T extends BaseModel> void fileListUpload(String requestValue, List<FormImage> listItem, Class<T> clazz, NetWorkCallback<T> callback) {
+        callback.Loading();
+        FileRequest<T> fileRequest = new FileRequest<T>(ToolKit.getInstance().getToolKitConfiguration().getBaseUrl() + requestValue, listItem, clazz, callback::Success, error -> callback.Error(error.getLocalizedMessage()));
+        fileRequest.setTag(requestValue);
+        queue.add(fileRequest);
+    }
+
+    public <T extends BaseModel> void fileUpload(String requestValue, FormImage formImage, Class<T> clazz, NetWorkCallback<T> callback) {
+        List<FormImage> formImages = new ArrayList<>();
+        formImages.add(formImage);
+        fileListUpload(requestValue, formImages, clazz, callback);
     }
 
     private String buildQueryUrl(String uri, Map<String, String> params) {
